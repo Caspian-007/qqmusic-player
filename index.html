@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-reactroot="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="keywords"
+          content="音乐,QQ音乐,在线听歌,音乐下载,音乐播放器,音乐网站,MV,巅峰榜,音乐排行榜,翻译歌曲,热门歌曲,经典老歌,无损音乐,无损曲库">
+    <meta name="description"
+          content="QQ音乐是腾讯公司推出的一款网络音乐服务产品，海量音乐在线试听、新歌热歌在线首发、歌词翻译、手机铃声下载、高品质无损音乐试听、海量无损曲库、正版音乐下载、空间背景音乐设置、MV观看等，是互联网音乐播放和下载的优选。">
+    <meta name="mobile-agent" content="format==[html5];url=http://i.y.qq.com/n2/m/">
+    <meta name="applicable-device" content="pc">
+    <meta property="og:title" content="QQ音乐-千万正版音乐海量无损曲库新歌热歌天天畅听的高品质音乐平台！">
+    <meta property="og:url" content="https://y.qq.com//n/ryqq/player">
+    <meta property="og:description"
+          content="QQ音乐是腾讯公司推出的一款网络音乐服务产品，海量音乐在线试听、新歌热歌在线首发、歌词翻译、手机铃声下载、高品质无损音乐试听、海量无损曲库、正版音乐下载、空间背景音乐设置、MV观看等，是互联网音乐播放和下载的优选。">
+    <meta property="og:site_name" content="QQ音乐">
+    <meta property="og:locale" content="zh_CN">
+    <title>QQ音乐-千万正版音乐海量无损曲库新歌热歌天天畅听的高品质音乐平台！</title>
+    <meta name="theme-color" content="#31c27c">
+    <link rel="shortcut icon" href="./img/favicon.ico?max_age=2592000">
+    <link rel="stylesheet" href="css/Page.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/player.css">
+</head>
+<body style="background-color: rgb(224, 224, 224);">
+<div id="app">
+    <h1 class="player_logo"><a href="">
+        <img class="player_logo__pic"
+             srcset="./img/player_logo@2x.png?max_age=2592000 2x"
+             src="./img/player_logo.png"
+             alt="QQ音乐"></a></h1>
+    <div class="bg_player_mask"></div>
+    <div class="bg_player"
+         style="display: block; background-image: url(./img/T002R300x300M000000DCgKb1UU4fm.jpg?max_age=2592000); background-color: rgb(255, 255, 255);"></div>
+    <div class="mod_player_login"><a class="player_login__link"><span class="player_login__txt">登录</span></a><a
+            class="player_login__link player_login__link--set"><span class="player_login__txt">设置</span></a></div>
+    <div class="mod_player">
+        <div class="player__hd"></div>
+        <div class="player__bd">
+            <div class="player_style_normal">
+                <div class="mod_songlist_toolbar"><a class="mod_btn"><i class="mod_btn_green__icon_like"></i>收藏<span
+                        class="mod_btn__border"></span></a><a class="mod_btn"><i class="mod_btn_green__icon_add"></i>添加到<span
+                        class="mod_btn__border"></span></a><a class="mod_btn"><i class="mod_btn_green__icon_down"></i>下载<span
+                        class="mod_btn__border"></span></a><a class="mod_btn"><i class="mod_btn_green__icon_delete"></i>删除<span
+                        class="mod_btn__border"></span></a><a class="mod_btn"><i class="mod_btn_green__icon_clear"></i>清空列表<span
+                        class="mod_btn__border"></span></a></div>
+                <div class="sb_scrollable sb_main sb_viewport">
+                    <div class="sb_overview" style="height: 621px;">
+                        <div class="mod_songlist mod_songlist--edit">
+                            <ul class="songlist__header">
+                                <li class="sprite songlist__edit songlist__edit"><input type="checkbox"
+                                                                                        class="songlist__checkbox"></li>
+                                <li class="songlist__header_name">歌曲</li>
+                                <li class="songlist__header_author">歌手</li>
+                                <li class="songlist__header_time">时长</li>
+                            </ul>
+                            <ul class="songlist__list">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mod_song_info">
+                    <div class="song_info__info">
+                    </div>
+                    <div class="song_info__lyric">
+                        <div class="song_info__lyric_box" id="js_lyric_box">
+                            <div class="song_info__lyric_inner"
+                                 style="transition: transform 0.1s ease-out; transform: translateY(0px);" id="qrc_ctn">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="player__ft"><a class="btn_big_prev"><span class="icon_txt">上一首</span></a><a class="btn_big_play"><span
+                class="icon_txt">播放</span></a><a class="btn_big_next"><span class="icon_txt">下一首</span></a>
+            <div class="player_music">
+                <div class="player_music__info" style="padding-right: 90px;"></div>
+                <div class="player_music__time"></div>
+                <div class="player_progress">
+                    <div class="player_progress__inner">
+                        <div class="player_progress__load" style="width: 90%; margin-left: 0px;"></div>
+                        <!--根据时间计算百分比填充进度-->
+                        <div class="player_progress__play" style="width: 0%; margin-left: 0px;"><i
+                                class="player_progress__dot"></i></div>
+                    </div>
+                </div>
+            </div>
+            <a class="btn_big_style_list" title="列表循环"><span class="icon_txt">列表循环</span></a><a
+                    class="btn_big_like"><span class="icon_txt">喜欢</span></a><a class="btn_big_down"><span
+                    class="icon_txt">下载</span></a><a class="btn_big_only btn_big_only--soundeffect"><span
+                    class="icon_txt">打开纯洁模式</span></a><a class="mod_btn_comment btn_comment99"><span
+                    class="btn_comment__numbers"><i class="btn_comment__numb btn_comment__numb_9"></i><i
+                    class="btn_comment__numb btn_comment__numb_9"></i><i
+                    class="btn_comment__numb btn_comment__numb_9"></i><i
+                    class="btn_comment__numb btn_comment__numb_add"></i></span><span class="icon_txt">评论</span></a><a
+                    href="javascript:" rel="noopener noreferrer" class="btn_audio_sound">
+                <svg width="40" height="40" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.6" fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12.428 5C11.1741 5 10.1576 6.01648 10.1576 7.27037V9.56217C9.83896 9.39177 9.47495 9.29515 9.08838 9.29515C7.83448 9.29515 6.818 10.3116 6.818 11.5655V18.3629H3.6C3.26863 18.3629 3 18.6315 3 18.9629C3 19.2943 3.26863 19.5629 3.6 19.5629H7.06924C7.59323 19.5629 8.018 19.1381 8.018 18.6141V11.5655C8.018 10.9744 8.49722 10.4951 9.08838 10.4951C9.66259 10.4951 10.1312 10.9473 10.1576 11.515V23.0196C10.1576 23.0443 10.158 23.0688 10.1588 23.0933V23.2582C10.1588 23.3425 10.1761 23.4227 10.2075 23.4955C10.4262 24.5209 11.3373 25.29 12.428 25.29C13.6818 25.29 14.6983 24.2735 14.6983 23.0196V7.27038C14.6983 6.01648 13.6818 5 12.428 5ZM11.3588 11.5655V23.0702C11.3851 23.6379 11.8537 24.09 12.428 24.09C13.0191 24.09 13.4983 23.6108 13.4983 23.0196V7.27038C13.4983 6.67922 13.0191 6.2 12.428 6.2C11.8368 6.2 11.3576 6.67922 11.3576 7.27037V11.4919C11.3584 11.5163 11.3588 11.5409 11.3588 11.5655ZM18.0392 10.0995C18.0392 9.76814 17.7706 9.49951 17.4392 9.49951C17.1078 9.49951 16.8392 9.76814 16.8392 10.0995V20.1559C16.8392 21.4098 17.8557 22.4263 19.1096 22.4263C20.3635 22.4263 21.38 21.4098 21.38 20.1559V13.8358H24.598C24.9293 13.8358 25.198 13.5672 25.198 13.2358C25.198 12.9044 24.9293 12.6358 24.598 12.6358H21.1104C20.5965 12.6358 20.18 13.0523 20.18 13.5662V20.1559C20.18 20.7471 19.7007 21.2263 19.1096 21.2263C18.5184 21.2263 18.0392 20.7471 18.0392 20.1559V10.0995ZM26.0651 7.44993V7.63593H26.8751V8.39193H26.0651V10.5999H25.1231V8.39193H23.8091V10.5999H22.8671V8.39193H22.3451V7.63593H22.8671V7.58193C22.8671 7.18993 22.9851 6.89593 23.2211 6.69993C23.4571 6.50393 23.7471 6.40593 24.0911 6.40593C24.4071 6.40593 24.6731 6.47393 24.8891 6.60993L24.5651 7.19793C24.4571 7.15393 24.3491 7.13193 24.2411 7.13193C23.9531 7.13193 23.8091 7.27793 23.8091 7.56993V7.64793H25.1231V7.44993C25.1231 7.06193 25.2391 6.76993 25.4711 6.57393C25.7071 6.37393 25.9931 6.27393 26.3291 6.27393C26.6651 6.27393 26.9491 6.36593 27.1811 6.54993L26.8631 7.14393C26.7271 7.05993 26.5971 7.01793 26.4731 7.01793C26.3491 7.01793 26.2491 7.05393 26.1731 7.12593C26.1011 7.19393 26.0651 7.30193 26.0651 7.44993ZM21.5985 10.2398C21.3025 10.5238 20.9065 10.6658 20.4105 10.6658C19.9145 10.6658 19.5185 10.5238 19.2225 10.2398C18.9305 9.95582 18.7845 9.58182 18.7845 9.11782C18.7845 8.65382 18.9305 8.27982 19.2225 7.99582C19.5185 7.71182 19.9145 7.56982 20.4105 7.56982C20.9065 7.56982 21.3025 7.71182 21.5985 7.99582C21.8945 8.27982 22.0425 8.65382 22.0425 9.11782C22.0425 9.58182 21.8945 9.95582 21.5985 10.2398ZM20.4105 9.86782C20.6185 9.86782 20.7865 9.79782 20.9145 9.65782C21.0425 9.51782 21.1065 9.33782 21.1065 9.11782C21.1065 8.89782 21.0425 8.71782 20.9145 8.57782C20.7865 8.43782 20.6185 8.36782 20.4105 8.36782C20.2065 8.36782 20.0405 8.43782 19.9125 8.57782C19.7845 8.71782 19.7205 8.89782 19.7205 9.11782C19.7205 9.33782 19.7845 9.51782 19.9125 9.65782C20.0405 9.79782 20.2065 9.86782 20.4105 9.86782Z"
+                          fill="white"></path>
+                </svg>
+            </a>
+            <div class="player_progress player_voice player_voice--soundEffect"><a class="btn_big_voice"><span
+                    class="icon_txt">关闭声音</span></a>
+                <div class="player_progress__inner">
+                    <div class="player_progress__play" style="width: 50%;"><i class="player_progress__dot"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>window.__USE_SSR__ = true;
+window.__REPORT_TIME__ = 0;
+window.__INITIAL_DATA__ = {}</script>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
